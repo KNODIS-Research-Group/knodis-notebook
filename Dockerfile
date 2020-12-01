@@ -5,6 +5,7 @@ LABEL maintainer="raul.lara@upm.es"
 # Some args for metadata labels
 ARG VCS_REF
 ARG BUILD_VERSION=devel
+ARG BUILD_DATE
 
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.name="knodis/knodis-notebook" \
@@ -12,7 +13,8 @@ LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.url="https://github.com/KNODIS-Research-Group/knodis-notebook" \
       org.label-schema.vcs-url="https://github.com/KNODIS-Research-Group/knodis-notebook" \
       org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.version=$BUILD_VERSION
+      org.label-schema.version=$BUILD_VERSION \
+      org.label-scheme.build-date=$BUILD_DATE
 
 # Additional IPyWidgets
 RUN pip install --upgrade \
